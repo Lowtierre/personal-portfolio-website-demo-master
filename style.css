@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Proza+Libre:wght@700&display=swap");
+
+:root {
+    --spacing-1: 8px;
+    --spacing-2: 12px;
+    --spacing-3: 16px;
+    --spacing-4: 24px;
+
+    --border-radius: 12px;
+
+    --font-color: #323232;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+    color: var(--font-color);
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-image: url("./img/sfondo.jpg");
+    color: #fff;
+    padding: 0 var(--spacing-4)
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation-items {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    align-items: center;
+}
+
+.navigation-item {
+    margin: var(--spacing-1);
+}
+
+.navigation-item a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.about-me-container {
+    position: absolute;
+    top: 0;
+    display: flex;
+    height: 100vh;
+}
+
+.about-me-text-container {
+    margin-right: var(--spacing-3);
+    padding: 30vh 0;
+    width: 60%;
+}
+
+.name {
+    font-size: 36px;
+    color: rgb(255, 214, 9);
+}
+
+.about-me-skills-container {
+    width: 40%;
+    padding-top: 22vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.skill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-4);
+    margin: var(--spacing-4);
+
+}
+.skill-item {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Proza Libre", sans-serif;
+}
+.percent{
+    font-size: 20px;
+}
+
+#projects {
+    position: relative;
+    margin-top: 100vh;
+}
+
+.projects-list {
+    padding: 0;
+    text-decoration: none;
+}
+
+.project {
+    padding: var(--spacing-4) 0;
+    margin: var(--spacing-4) 0;
+    display: flex;
+}
+
+.project-container {
+    width: 60%;
+    padding-right: 5%;
+    /* margin-right: 5%; */
+}
+
+.project-odd {
+    flex-direction: row-reverse;
+}
+
+.project-odd .project-container {
+    padding-left: 5%;
+    /* margin-left: 5%; */
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.project-odd .project-description, .project-odd .project-title {
+    text-align: right;
+}
+
+.img-container {
+    width: 300px;
+    height: 180px;
+    margin: var(--spacing-4);
+    border-radius: 25px;
+    background-image: url("https://images2.minutemediacdn.com/image/upload/c_fit,f_auto,fl_lossy,q_auto,w_728/v1555925585/shape/mentalfloss/analyticalmachine_babbage_london.jpg?itok=5vRTwQjb");
+    background-size: cover;
+}
+
+.project-image {
+    width: 100%;
+}
+
+.project-title h3 {
+    display: inline;
+}
+
+#contact h2 {
+    text-align: center;
+} 
+
+.contact-container {
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+.portrait {
+    width: 160px;
+    height: 160px;
+    border-radius: 55%;
+    /* margin-right: var(--spacing-4); */
+    background-image: url("./img/Me.jpeg");
+    background-size: cover;
+}
+
+.contact-info {
+    width: 30%;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+}
+
+
+footer {
+    padding: var(--spacing-4) 0;
+    text-align: right;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .about-me-container {
+        position: relative;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .about-me-text-container {
+        padding: var(--spacing-2) 0;
+        width: 100%;
+    }
+
+    .about-me-skills-container {
+        width: 100%;
+        padding: 0;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .skill {
+        flex-direction: column;
+        gap: var(--spacing-1);
+    }
+    #projects {
+        margin-top: auto;
+    }
+    .project-container {
+        width: 100%;
+    }
+    .img-container{
+        display: none;
+    }
+}
