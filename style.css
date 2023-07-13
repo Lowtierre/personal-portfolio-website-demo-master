@@ -38,6 +38,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 90vh;
 }
 
 .navigation-items {
@@ -48,7 +49,7 @@ nav {
 }
 
 .navigation-item {
-    margin: var(--spacing-1);
+    margin: var(--spacing-1) var(--spacing-4);
 }
 
 .navigation-item a {
@@ -58,15 +59,32 @@ nav {
 
 .about-me-container {
     position: absolute;
-    top: 0;
+    top: 10vh;
     display: flex;
-    height: 100vh;
 }
 
 .about-me-text-container {
     margin-right: var(--spacing-3);
-    padding: 30vh 0;
+    padding: 15vh 75px 40vh;
     width: 60%;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-start; */
+}
+
+.cta {
+    position:absolute;
+    top: 60vh;
+    left: 260px;
+    width: 250px;
+    height: 70px;
+    background-color: rgb(255, 214, 9);
+    color: #4930d5;
+    border-radius: 10px;
+    border: none;
+    font-size: 24px;
+    font-family: "Proza Libre", sans-serif;
+    cursor: pointer;
 }
 
 .name {
@@ -76,36 +94,34 @@ nav {
 
 .about-me-skills-container {
     width: 40%;
-    padding-top: 22vh;
+    padding-top: 12vh;
+    padding-left: 50px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-start;
+    /* justify-content: flex-start; */
 }
 
 .skill {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: var(--spacing-4);
     margin: var(--spacing-4);
 
 }
 .skill-item {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
+    margin-left: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: "Proza Libre", sans-serif;
 }
+
 .percent{
     font-size: 20px;
-}
-
-#projects {
-    position: relative;
-    margin-top: 100vh;
+    margin-right: 50px;
 }
 
 .projects-list {
@@ -121,7 +137,7 @@ nav {
 
 .project-container {
     width: 60%;
-    padding-right: 5%;
+    padding-right: 8%;
     /* margin-right: 5%; */
 }
 
@@ -130,7 +146,7 @@ nav {
 }
 
 .project-odd .project-container {
-    padding-left: 5%;
+    padding-left: 8%;
     /* margin-left: 5%; */
     padding-right: 0;
     margin-right: 0;
@@ -141,16 +157,22 @@ nav {
 }
 
 .img-container {
-    width: 300px;
+    width: 345px;
     height: 180px;
     margin: var(--spacing-4);
     border-radius: 25px;
-    background-image: url("https://images2.minutemediacdn.com/image/upload/c_fit,f_auto,fl_lossy,q_auto,w_728/v1555925585/shape/mentalfloss/analyticalmachine_babbage_london.jpg?itok=5vRTwQjb");
     background-size: cover;
 }
 
-.project-image {
-    width: 100%;
+#uas {
+    background-image: url("./img/UAS.jpg");
+}
+#landing-page {
+    background-image: url("./img/landing.jpg");
+    background-position-y: 80%;
+}
+#web-hosting {
+    background-image: url("./img/web_hosting.jpg");
 }
 
 .project-title h3 {
@@ -172,7 +194,6 @@ nav {
     width: 160px;
     height: 160px;
     border-radius: 55%;
-    /* margin-right: var(--spacing-4); */
     background-image: url("./img/Me.jpeg");
     background-size: cover;
 }
@@ -196,25 +217,35 @@ footer {
 @media only screen and (max-width: 768px) {
 
     .about-me-container {
-        position: relative;
         flex-direction: column;
         height: auto;
     }
 
     .about-me-text-container {
-        padding: var(--spacing-2) 0;
+        padding: var(--spacing-2);
         width: 100%;
     }
 
+    .cta {
+        top:73vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     .about-me-skills-container {
         width: 100%;
         padding: 0;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-evenly;
     }
     .skill {
         flex-direction: column;
-        gap: var(--spacing-1);
+        /* gap: var(--spacing-1); */
+    }
+    .skill-item{
+        margin: 0;
+    }
+    .percent {
+        margin: 0;
     }
     #projects {
         margin-top: auto;
